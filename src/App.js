@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react';
+import Quote from './Quote';
 import './App.css';
+import kanyeImg from './assets/kanye.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends React.Component{
+  constructor() {
+    super()
+    this.state = {
+      quote: ''
+    }
+  }
+
+  getQuote = () => {
+    fetch('https://api.kanye.rest/')
+      .then(response => response.json())
+      .then(data => this.setState({quote: data.quote}))
+  }
+
+  render() {
+    return (
+      <main>
+        <button
+          onClick={() => this.getQuote()}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          Ask Kanye
+        </button>
+        <div className="main-container">
+          <div className="img-container">
+            <img
+              src={kanyeImg}
+              alt='kanye face'
+            />
+          </div>
+          <div className="quote-container">
+            {this.state.quote &&
+              <Quote quote={this.state.quote} />
+            }
+          </div>
+        </div>
+      </main>
+    )
+
+  }
 }
 
 export default App;
