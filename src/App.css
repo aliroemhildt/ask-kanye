@@ -2,12 +2,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: stretch;
   height: 100vh;
+  width: 100vw;
 }
 
 img {
-  width: 75%;
-  height: auto;
+  width: auto;
+  height: 80%;
+  margin-bottom: 20%;
 }
 
 button {
@@ -17,22 +20,35 @@ button {
   margin: 50px;
 }
 
-.main-container {
-  display: flex;
-  align-items: center;
-  min-height: 60%;
-  width: 100%;
+.button-container {
+  height: 30%;
 }
 
 .img-container {
-  min-width: 25%;
-  min-height: 100%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .quote-container {
-  min-width: 75%;
-  min-height: 100%;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 391px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  img {
+    width: auto;
+    height: 100%;
+  }
 }

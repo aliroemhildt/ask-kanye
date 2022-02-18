@@ -3,7 +3,7 @@ import './Quote.css';
 
 const Quote = ({ quote }) => {
   return (
-      <p>{quote}</p>
+    <p className="quote">{quote}</p>
   )
 }
 
