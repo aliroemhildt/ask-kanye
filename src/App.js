@@ -20,23 +20,23 @@ class App extends React.Component{
   render() {
     return (
       <main>
-        <button
-          onClick={() => this.getQuote()}
-        >
-          Ask Kanye
-        </button>
-        <div className="main-container">
-          <div className="img-container">
-            <img
-              src={kanyeImg}
-              alt='kanye face'
-            />
-          </div>
-          <div className="quote-container">
-            {this.state.quote &&
-              <Quote quote={this.state.quote} />
-            }
-          </div>
+        <div className="button-container">
+          <button
+            onClick={() => this.getQuote()}
+          >
+            Ask Kanye
+          </button>
+        </div>
+        <div className="quote-container">
+          {this.state.quote &&
+            <Quote quote={this.state.quote} />
+          }
+        </div>
+        <div className="img-container">
+          <img
+            src={kanyeImg}
+            alt='kanye face'
+          />
         </div>
       </main>
     )
