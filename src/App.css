@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap');
 
-/* light green #42FE90
-dark green #00D98A
-orange: #FFA001
-light purple: #BBBBF9
-dark purple: #AD8CFC */
-
-/* --green: #a5ea9b;
---pink: #ff61d8;
---blue: #569cfa;
---orange: #ffcc81;
---cyan: #7ed1e2; */
-
 main {
   display: flex;
   flex-direction: column;
@@ -74,12 +62,10 @@ button:active {
 
 @keyframes rotate {
   0% {
-    /* transform: rotate(0deg); */
     transform: scale(1) rotateZ(0);
   }
 
   50% {
-    /* transform: rotate(360deg); */
     transform: scale(1.5) rotateZ(180deg);
   }
 
@@ -91,14 +77,14 @@ button:active {
 .quote-container {
   height: 35vh;
   width: 100vw;
-  font-family: 'Press Start 2P';
-  font-size: 20px;
+  /* font-family: 'Press Start 2P';
+  font-size: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #2cdb1c;
-  line-height: 1.5;
+  /* color: #2cdb1c;
+  line-height: 1.5; */
 }
 
 @media screen and (max-width: 391px) {

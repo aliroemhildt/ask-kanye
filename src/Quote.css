@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap');
+
 .quote {
   text-align: center;
   width: 80%;
+   color: #2cdb1c;
+  line-height: 1.5;
+  font-family: 'Press Start 2P';
+  font-size: 20px;
 }
