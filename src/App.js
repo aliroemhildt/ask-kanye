@@ -11,10 +11,23 @@ class App extends React.Component{
     }
   }
 
+  rotateImage = () => {
+    const element = document.querySelector('img');
+    let newElement = element.cloneNode(true);
+    newElement.classList.add('img-rotate');
+    element.parentNode.replaceChild(newElement, element);
+  }
+
   getQuote = () => {
     fetch('https://api.kanye.rest/')
       .then(response => response.json())
-      .then(data => this.setState({quote: data.quote}))
+      .then(data => {
+        if (this.state.quote !== data) {
+          this.setState({ quote: data.quote }, this.rotateImage);
+        } else {
+          this.getQuote();
+        }
+    })
   }
 
   render() {
@@ -34,6 +47,7 @@ class App extends React.Component{
         </div>
         <div className="img-container">
           <img
+            className='img'
             src={kanyeImg}
             alt='kanye face'
           />
