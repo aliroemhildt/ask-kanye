@@ -54,6 +54,7 @@ button:active {
   height: 80%;
   margin-bottom: 3%;
   filter: drop-shadow(0 0 30px #2d17a8);
+  background-color: transparent;
 }
 
 .img-rotate {
@@ -77,14 +78,10 @@ button:active {
 .quote-container {
   height: 35vh;
   width: 100vw;
-  /* font-family: 'Press Start 2P';
-  font-size: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* color: #2cdb1c;
-  line-height: 1.5; */
 }
 
 @media screen and (max-width: 425px) {
